@@ -1,10 +1,30 @@
-<!-- <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">KelltonTech</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" routerLink="/registration">Registration  <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/anagram"> Anagram </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" routerLink="/tempTracker">Temperature Monitor</a>
+        </li>
+     
+      </ul>
+    </div>
+  </nav>
+
+ <div class="container">
     <div class="card m-3"> 
-        <h5 class="card-header">Registers</h5>
-        <div class="card-body"> <app-register></app-register> </div>  
+        <router-outlet> </router-outlet>
     </div>
     
-</div> -->
+</div> 
 
-<app-anagram></app-anagram>
+
 <!-- <app-temp-tracker> </app-temp-tracker> -->
