@@ -1,0 +1,49 @@
+<div class="container">
+        <div class="card m-3"> 
+            <h5 class="card-header">Temperature Monitor</h5>
+            <div class="card-body"> 
+                    <form class="form-inline">
+                            <div class="form-group mx-sm-3 mb-2">
+                              <label for="str2" class="sr-only">String 2</label>
+                              <input type="number" class="form-control"  [(ngModel)]="temperatur" name="temp" placeholder="Add Temperature" >
+                            </div>
+                            <button type="button" class="btn btn-primary mb-2" (click)="insert()"> Add </button>
+                  </form> 
+                  <hr> 
+                  <div class="flex ml-3">
+                        <button type="button" class="btn btn-success mb-2" (click)="get_max()"> Get Max </button>
+                        <button type="button" class="btn btn-dark mb-2" (click)="get_min()"> Get Min </button>
+                        <button type="button" class="btn btn-info mb-2" (click)="get_mean()"> Get Mean </button>
+                  </div>
+
+                  <hr> 
+
+                <div class="col-md-4">
+                        <table class="table table-bordered" *ngIf="temperaturArray">
+                                        <tr>
+                                                        <td> Temperature </td>
+                                                        <td class="temp"> <span *ngFor="let  temp of temperaturArray">{{temp}},</span> </td>
+                                                     </tr>
+                                <tr>
+                                   <td> Max </td>
+                                   <td> {{maxTemp}} </td>
+                                </tr>
+                                <tr>
+                                   <td> Min </td>
+                                   <td> {{minTemp}} </td>
+                                </tr>
+                                <tr>
+                                   <td> Mean </td>
+                                   <td> {{minMean}} </td>
+                                </tr>
+                             </table>
+                </div>
+                  
+
+            </div>  
+        </div>
+        
+</div>
+
+
+
