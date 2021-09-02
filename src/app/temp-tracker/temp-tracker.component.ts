@@ -19,7 +19,9 @@ export class TempTrackerComponent implements OnInit {
   insert(){
     if(this.temperatur <= 150 || this.temperatur >= 0){
       this.temperaturArray.push(this.temperatur);
-     
+      this.get_max();
+      this.get_min();
+      this.get_mean();
     }
     else{
       throw "invalid Temperature";
